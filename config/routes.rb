@@ -9,8 +9,11 @@ Rails.application.routes.draw do
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
 
+  get '/hotels' => 'hotels#index'
   get '/hotels' => 'hotels#new'
   post '/hotels' => 'hotels#create'
-  get '/hotels/:id/edit' => 'hotels#edit', :as => 'planets_edit'
   get '/hotels/:id/show' => 'hotels#show'
+  get '/hotels/:id/edit' => 'hotels#edit', :as => 'planets_edit'
+  post '/hotels/:id' => 'hotels#update'
+  delete '/hotels/:id' => 'hotels#destroy'
 end
