@@ -1,9 +1,5 @@
 class User < ApplicationRecord
-
-  
-
-  has_many :reviews
+  has_secure_password
   has_many :hotels
-
-  validates :email, :presence => true, :uniqueness => true
+  has_many :reviews
 end

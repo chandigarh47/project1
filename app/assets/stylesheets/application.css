@@ -28,12 +28,12 @@
   width: 100%;
   overflow: hidden;
   top: 0;
-  position: absolute;
+
 }
 
  li{
   display: flex;
-  width: 15%;
+   width: 15%;
 }
 
 .logo{
@@ -45,84 +45,76 @@
 }
 
 .signup_form{
-  display: flex;
+  /* display: flex; */
   background-color: green;
-  display: block;
-  height: 200px;
-  width: 200px;
+  /* display: block; */
+  /* height: 200px;
+  width: 200px; */
   text-align: center;
   margin-left: 400px;
-  position: fixed;
+  /* position: fixed; */
 }
 
 .first_hotel{
   display: flex;
   margin-left: 50px;
   margin-top: -50px;
-  background-color: orange;
-  width: 20px;
-  height: 200px;
-  font-size: 20px;
-  text-align: center;
 
 }
 
 .first_pic{
-
-  display: block;
-  position: relative;
-  height: 20px;
-  background-position: center;
+  /* position: relative; */
+  max-height: 20px;
+  max-width: 20px;
+  /* background-position: center; */
 }
 
 .second_hotel{
-  display: flex;
+  /* display: flex; */
   margin-left: 400px;
-  margin-top: -200px;
-  background-color: orange;
-  width: 300px;
-  height: 200px;
+  margin-top: 200px;
+  /* width: 300px;
+  height: 200px; */
   font-size: 20px;
   text-align: center;
 }
 .second_pic{
-  background-image: url('https://t-ec.bstatic.com/images/hotel/max1024x768/441/44175320.jpg');
-  display: block;
-  position: relative;
-  height: 200px;
-  background-position: center;
-  background-size: cover;
+
+  /* position: relative; */
+  /* height: 200px; */
+  /* background-position: center;
+  background-size: cover; */
 }
 
 .third_hotel{
-  display: flex;
+  /* display: flex; */
   margin-left: 750px;
   margin-top: -200px;
   background-color: orange;
-  width: 300px;
-  height: 200px;
+  /* width: 300px;
+  height: 200px; */
   font-size: 20px;
   text-align: center;
 }
 
 .fourth_hotel{
-  display: flex;
+  /* display: flex; */
   margin-left: 50px;
   margin-top: 20px;
   background-color: orange;
-  width: 300px;
-  height: 200px;
+  /* width: 300px;
+  height: 200px; */
   font-size: 20px;
   text-align: center;
 }
 
 .fifth_hotel{
-  display: flex;
+  /* display: flex; */
   margin-left: 400px;
   margin-top: -200px;
   background-color: orange;
-  width: 300px;
-  height: 200px;
+  /* width: 300px;
+  height: 200px; */
   font-size: 20px;
   text-align: center;
 }

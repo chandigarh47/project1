@@ -1,14 +1,19 @@
 
+<h2>New Hotel</h2>
 
-<h2>Hotels</h2>
-<div class="hotels_list">
-<ul>
-  <div class="controls">
-  <div class="first_hotel first_pic"><%= image_tag 'hotel2.jpg' %><%= link_to 'Royal Inn', show_path%>Royal Inn
-  <div class="second_hotel second_pic"><%= link_to 'Hotel Paradise', show_path%>Hotel Paradise</div>
-  <div class="third_hotel"><%= link_to 'Sparta Hotel', show_path%>Sparta Hotel</div>
-  <div class="fourth_hotel"><%= link_to 'Alpha One', show_path%>Alpha One</div>
-  <div class="fifth_hotel"><%= link_to 'Turtle on the Beach', show_path%> Turtle On The Beach</div>
-</div>
-</ul>
-</div>
+<form action="/hotels" method="post">
+  <label>Name:</label>
+  <input type="text" name="hotel[name]" placeholder="Alpha">
+  <label>image:</label>
+  <input type="url" name="hotel[image]" placeholder="https://...">
+
+  <label>Rooms</label>
+  <input type="number" name="hotel[room]" placeholder="50">
+
+  <label>Price</label>
+  <input type="number" name="hotel[price]" placeholder="$250">
+  <label>Amenity</label>
+  <input type="text" name="hotel[amenity]" placeholder="Spa">
+
+  <button> Create Hotel </button>
+</form>

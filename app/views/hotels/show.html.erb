@@ -1,3 +1,43 @@
-<h2>Royal Inn Hotel</h2>
+<h2><%= @hotel.name %></h2>
 <%= link_to 'All Hotels', hotels_path%>
 <%= image_tag 'hotel1.jpg'%>
+
+<ul>
+<% @hotel.reviews.each do |review| %>
+  <p><%= review.content %></p>
+
+  <li><%= @hotel.name %></li>
+  </ul>
+  <!-- show author name and date -->
+<% end %>
+
+
+<h2><%= @hotel.name %></h2>
+<% if @hotel.image.present? %>
+<%= image_tag @hotel.image, :alt => @hotel.name, :class => 'thumb' %>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Rooms</td>
+      <td>Price</td>
+      <td>Amenity</td>
+    </tr>
+  </thaed>
+  <tbody>
+    <tr>
+      <td><%= @hotel.name %></td>
+      <td><%= @hotel.room %></td>
+      <td><%=  @hotel.price %></td>
+      <td><%=  @hotel.amenity %></td>
+
+    </tr>
+  </tbody>
+</table>
+
+<div class="controls">
+  <%= link_to 'edit hotel', hotels_edit_path(@hotel.id) %>
+  <%= button_to 'delete hotel', hotel_path(@hotel.id), :method =>'delete' %>
+</div>

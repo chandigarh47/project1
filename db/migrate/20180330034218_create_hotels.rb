@@ -2,6 +2,10 @@ class CreateHotels < ActiveRecord::Migration[5.1]
   def change
     create_table :hotels do |t|
       t.text :name
+      t.text :image
+      t.integer :room
+      t.integer :price
+      t.text :amenity
       t.text :reviews_id
 
       t.timestamps

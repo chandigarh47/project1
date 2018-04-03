@@ -1,0 +1,18 @@
+<h2>Edit Hotel</h2>
+
+<form action="/hotels/<%= @hotel.id %>" method="post">
+  <label>Name:</label>
+  <input type="text" name="hotel[name]" placeholder="Alpha" value="<%= @hotel.name %>">
+  <label>Image:</label>
+  <input type="url" name="hotel[image]" placeholder="https://..."  value="<%= @hotel.image %>">
+
+  <label>Rooms:</label>
+  <input type="number" name="hotel[room]" placeholder="50" value="<%= @hotel.room %>">
+
+  <label>Price:</label>
+  <input type="number" name="hotel[price]" placeholder="$250" value="<%= @hotel.price %>">
+  <label>Amenity</label>
+  <input type="text" name="hotel[amenity]" placeholder="Spa" value="<%= @hotel.amenity %>">
+
+  <button>Update Hotel</button>
+</form>
