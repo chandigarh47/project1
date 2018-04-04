@@ -1,21 +1,21 @@
 # == Schema Information
 #
-# Table name: hotels
+# Table name: bookings
 #
 #  id         :integer          not null, primary key
 #  name       :text
-#  image      :text
-#  room       :integer
+#  checkin    :integer
+#  checkout   :integer
 #  room_type  :text
 #  price      :integer
-#  amenity    :text
-#  reviews_id :text
+#  hotel_id   :integer
+#  user_id    :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class Hotel < ApplicationRecord
-  belongs_to :user, :optional => true
-  has_many :bookings
-  has_many :reviews
+class Booking < ApplicationRecord
+  has_many :users
+  belongs_to :hotel, :optional => true;
+
 end

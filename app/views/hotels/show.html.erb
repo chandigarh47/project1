@@ -1,43 +1,34 @@
 <h2><%= @hotel.name %></h2>
 <%= link_to 'All Hotels', hotels_path%>
-<%= image_tag 'hotel1.jpg'%>
 
-<ul>
-<% @hotel.reviews.each do |review| %>
-  <p><%= review.content %></p>
-
-  <li><%= @hotel.name %></li>
-  </ul>
-  <!-- show author name and date -->
-<% end %>
-
-
-<h2><%= @hotel.name %></h2>
 <% if @hotel.image.present? %>
 <%= image_tag @hotel.image, :alt => @hotel.name, :class => 'thumb' %>
 <% end %>
 
-<table>
-  <thead>
-    <tr>
-      <td>Name</td>
-      <td>Rooms</td>
-      <td>Price</td>
-      <td>Amenity</td>
-    </tr>
-  </thaed>
-  <tbody>
-    <tr>
-      <td><%= @hotel.name %></td>
-      <td><%= @hotel.room %></td>
-      <td><%=  @hotel.price %></td>
-      <td><%=  @hotel.amenity %></td>
+<ul>
+  <li>Name: <%= @hotel.name %></li>
+  <li>Rooms: <%= @hotel.room %></li>
+  <li>Room Type: <%= @hotel.room_type %></li>
+  <li>Price: <%=  @hotel.price %></li>
+  <li>Amenity: <%=  @hotel.amenity %></li>
+</ul>
 
-    </tr>
-  </tbody>
-</table>
 
+<button>User's Review<%= link_to 'show user', user_path%></button>
+
+<ul>
+<li>User Review: <% @hotel.reviews.each do |review| %>
+  <p><%= review.content %></p></li>
+
+  <li>User Name: <%= review.user.name%></li>
+  <li>User's Review Date: <%= review.created_at.strftime '%B %d, %Y'%></li>
+  </ul>
+
+  <!-- show author name and date -->
+<% end %>
 <div class="controls">
-  <%= link_to 'edit hotel', hotels_edit_path(@hotel.id) %>
+  <%= link_to 'edit hotel', edit_hotel_path(@hotel.id) %>
   <%= button_to 'delete hotel', hotel_path(@hotel.id), :method =>'delete' %>
 </div>
+
+<%= render :partial => 'bookings/form' %>

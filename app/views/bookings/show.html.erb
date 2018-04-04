@@ -1,0 +1,20 @@
+<h2><%= @booking.name %></h2>
+<%= link_to 'All Booking', bookings_path%>
+
+<% if @booking.hotel.image.present? %>
+<%= image_tag @booking.hotel.image, :alt => @booking.hotel.name, :class => 'thumb' %>
+<% end %>
+
+<ul>
+  <li>Name: <%= @booking.name %></li>
+  <li>Check In: <%= @booking.checkin.strftime '%l:%M %P'%></li>
+  <li>Check Out: <%= @booking.checkout.strftime '%l:%M %P'%></li>
+  <li>Room Type: <%= @booking.room_type %></li>
+  <li>Price: <%=  @booking.price %></li>
+
+</ul>
+
+<div class="controls">
+  <%= link_to 'edit booking', edit_booking_path(@booking.id) %>
+  <%= button_to 'delete booking', booking_path(@booking.id), :method =>'delete' %>
+</div>

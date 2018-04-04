@@ -1,0 +1,23 @@
+
+<%= form_for @hotel do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name, :autofocus => true %>
+
+<%= f.label :room %>
+<%= f.text_field :room %>
+
+<%= f.label :room_type%>
+<%= f.text_field :room_type %>
+
+<%= f.label :price %>
+<%= f.text_field :price %>
+
+<%= f.label :amenity %>
+<%= f.text_field :amenity %>
+
+<%= f.label :image %>
+<%= f.url_field :image %>
+
+<%= f.submit %>
+
+<% end %>

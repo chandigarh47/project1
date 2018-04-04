@@ -1,0 +1,23 @@
+<%= form_for @booking || Booking.new do |f| %>
+<%= hidden_field_tag :hotel_id, @hotel.id if @hotel.present? %>
+
+<%= f.label :name %>
+<%= f.text_field :name, :autofocus => true %>
+
+<%= f.label :checkin %>
+<%= f.text_field :checkin %>
+
+<%= f.label :checkout %>
+<%= f.text_field :checkout %>
+
+<%= f.label :room_type%>
+<%= f.text_field :room_type %>
+
+<%= f.label :price %>
+<%= f.text_field :price %>
+
+
+
+<%= f.submit %>
+
+<% end %>
