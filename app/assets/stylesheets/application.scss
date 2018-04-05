@@ -24,7 +24,7 @@ a {
   background-color: rgba(139, 0, 0, 0.53);
   min-height: 100px;
   margin-top: 20px;
-  padding-top: 25px;
+  padding-top: 35px;
   border-radius: 0.5em;
   justify-content: space-between;
 }
@@ -81,6 +81,12 @@ h1{
   max-height: auto;
 }
 
+.form-img h2{
+  margin-top: 20px;
+}
+.booking-form-img{
+  background-image: url(https://thumbs.dreamstime.com/b/purpura-papierowy-geometryczny-wz%C3%B3r-abstrakcjonistyczny-t-o-szablon-dla-strony-internetowej-sztandar-wizyt%C3%B3wka-zaproszenie-51367406.jpg);
+}
 .hotel-form{
   background-color: rgba(139,0,139,0.4);
   margin-top: 40px;
@@ -103,9 +109,9 @@ h1{
   text-align: center;
 }
 .logo {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 10px;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
 }
 
 .btn{
