@@ -1,23 +1,40 @@
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-4 hotel-form">
 
-<%= form_for @hotel do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name, :autofocus => true %>
+    <%= form_for @hotel do |f| %>
+    <div class="form-group">
+      <div class="color">
+        <h2>Edit Hotel</h2>
+    <%= f.label :name %>
+    <%= f.text_field :name, :autofocus => true, :class => 'form-control' %>
 
-<%= f.label :room %>
-<%= f.text_field :room %>
 
-<%= f.label :room_type%>
-<%= f.text_field :room_type %>
+    <div class="form-group">
+    <div class="color">
+    <%= f.label :room %>
+    <%= f.text_field :room, :class => 'form-control'%>
 
-<%= f.label :price %>
-<%= f.text_field :price %>
+    <div class="form-group">
+    <%= f.label :room_type%>
+    <%= f.text_field :room_type, :class => 'form-control' %>
 
-<%= f.label :amenity %>
-<%= f.text_field :amenity %>
+    <div class="form-group">
+    <%= f.label :price %>
+    <%= f.text_field :price, :class => 'form-control' %>
 
-<%= f.label :image %>
-<%= f.url_field :image %>
+    <div class="form-group">
+    <%= f.label :amenity %>
+    <%= f.text_field :amenity, :class => 'form-control' %>
 
-<%= f.submit %>
+    <div class="form-group">
+    <%= f.label :image %>
+    <%= f.url_field :image, :class => 'form-control' %>
+  </div>
+</div>
+    <div class="btn btn-default">
+    <%= f.submit %>
 
 <% end %>
+
+</div>
+</div>

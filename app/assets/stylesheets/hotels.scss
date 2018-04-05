@@ -1,3 +1,60 @@
 // Place all the styles related to the Hotels controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.hotel-info{
+  background-color: pink;
+}
+
+.details {
+  width: 13em;
+  margin: 0 auto;
+}
+
+.details ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.hotel-img{
+  height: 300px;
+}
+.hotel-img img {
+  display: block;
+  margin: auto;
+}
+.text{
+  font-size: 30px;
+}
+
+h2{
+
+  text-align: center;
+  font-family: cursive;
+}
+
+h2:hover{
+  color: darkred;
+}
+
+.img{
+  background-image: url(http://boxeehq.com/wp-content/uploads/2017/06/best-rooms-hotel-jamaica-home-design-very-nice-classy-simple-at-rooms-hotel-jamaica-home-improvement.jpg);
+}
+.transbox {
+  margin: 20px;
+  background-color: rgba(233,150,122, 0.6);
+  text-align:center;
+  border: 1px solid red;
+
+}
+
+.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}
+
+.all-hotels{
+  text-align: center;
+  font-size: 20px;
+}

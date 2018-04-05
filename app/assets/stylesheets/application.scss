@@ -14,13 +14,19 @@
  *= require_self
  */
 
+a {
+  color: purple;
+}
 
  nav {
-   display: flex;
+  display: flex;
   font-size: 30px;
-  background-color: lightpink;
-  min-height: 200px;
-  padding-left: 40px;
+  background-color: rgba(139, 0, 0, 0.53);
+  min-height: 100px;
+  margin-top: 20px;
+  padding-top: 25px;
+  border-radius: 0.5em;
+  justify-content: space-between;
 }
 
 .thumb{
@@ -28,23 +34,98 @@
   height: 0 auto;
 }
 
-
-.signup_form{
-  display: flex;
-  background-color: green;
-  height: 200px;
-  width: 400px;
-  text-align: left;
-  margin-left: 400px;
-  border: 1px solid black;
-  border-radius: 1.5em;
-
+.img-thumbnail {
+  height: 179px;
+  width: 100%;
+  background-size: cover;
+  margin-bottom: -5px;
 }
 
-.img{
+.hotels{
+  font-size: 20px;
+  color: orange;
+}
+
+.signup {
+  background-color: rgba(255, 0, 0, 0.6);
+  margin-top: 40px;
+}
+
+h1{
   text-align: center;
-  color: darkred;
-  max-width: 0 auto;
-  max-height: 0 auto;
-  background-image: url(https://images.trvl-media.com/media/content/expus/graphics/launch/hotel1320x742.jpg);
+}
+
+.login {
+  background-color: rgba(255, 0, 0, 0.6);
+  margin-top: 40px;
+}
+
+.login h1{
+  color: white;
+}
+.booking-form{
+  background-color: rgba(0, 0, 255, 0.6);
+  text-align: left;
+}
+
+.booking-form h3{
+  text-align: center;
+}
+
+.form-details{
+  text-align: center;
+}
+.form-img{
+  background-image: url(https://image.freepik.com/free-psd/abstract-background-design_1297-73.jpg);
+  max-width: auto;
+  max-height: auto;
+}
+
+.hotel-form{
+  background-color: rgba(139,0,139,0.4);
+  margin-top: 40px;
+}
+
+.all-bookings{
+  text-align: center;
+  font-size: 30px;
+}
+
+.booking-details {
+  width: 13em;
+  margin: 0 auto;
+  padding: 0;
+  background-color: white;
+  border-radius: 1em;
+}
+
+.change-booking{
+  text-align: center;
+}
+.logo {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.btn{
+  margin-top: 20px;
+  margin-left: 100px;
+}
+
+.color{
+  color: white;
+}
+
+.user-details{
+  color: white;
+  font-size: 20px;
+}
+
+.edit-booking{
+  color: white;
+  font-size: 30px;
+  background-color: rgba(220,20,60,0.6);
+  width: 350px;
+  margin-left: 300px;
 }

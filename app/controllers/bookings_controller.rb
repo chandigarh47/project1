@@ -2,12 +2,6 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = Booking.all
-    # if @booking.nil?
-    #   redirect_to hotels_path
-    # else
-    #   bookings_path
-    # end
-    # binding.pry
 
   end
 

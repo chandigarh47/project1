@@ -1,4 +1,4 @@
-
+<div class="all-bookings">
 <h2>All Bookings</h2>
 
 <% @bookings.each do |booking| %>
@@ -6,3 +6,4 @@
   <%= link_to booking.name, booking_path(booking.id)%>
 </p>
 <% end %>
+</div>

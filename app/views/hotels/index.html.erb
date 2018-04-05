@@ -1,8 +1,14 @@
+<div class="img">
+  <div class="text">
+    <div class="transbox">
 
-<h2>All Hotels</h2>
+          <h2>All Hotels</h2>
 
-<% @hotels.each do |hotel| %>
-<p>
-  <%= link_to hotel.name, hotel_path(hotel.id)%>
-</p>
-<% end %>
+          <% @hotels.each do |hotel| %>
+          <p>
+            <%= link_to hotel.name, hotel_path(hotel.id)%>
+          </p>
+          <% end %>
+    </div>
+  </div>
+</div>

@@ -1,21 +1,34 @@
-<%= form_for @booking || Booking.new do |f| %>
-<%= hidden_field_tag :hotel_id, @hotel.id if @hotel.present? %>
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-4 booking-form">
 
-<%= f.label :name %>
-<%= f.text_field :name, :autofocus => true %>
+    <%= form_for @booking || Booking.new do |f| %>
+    <%= hidden_field_tag :hotel_id, @hotel.id if @hotel.present? %>
 
-<%= f.label :checkin %>
-<%= f.date_field :checkin %>
+    <div class="form-group">
+    
+    <%= f.label :name %>
+    <%= f.text_field :name, :autofocus => true, :class => 'form-control' %>
 
-<%= f.label :checkout %>
-<%= f.date_field :checkout %>
+    <div class="form-group">
+    <%= f.label :checkin %>
+    <%= f.datetime_select :checkin, :class => 'form-control' %>
 
-<%= f.label :room_type%>
-<%= f.text_field :room_type %>
+    <div class="form-group">
+    <%= f.label :checkout %>
+    <%= f.datetime_select :checkout, :class => 'form-control' %>
 
-<%= f.label :price %>
-<%= f.text_field :price %>
+    <div class="form-group">
+    <%= f.label :room_type%>
+    <%= f.text_field :room_type, :class => 'form-control' %>
 
-<%= f.submit %>
+    <div class="form-group">
+    <%= f.label :price %>
+    <%= f.text_field :price, :class => 'form-control' %>
+
+
+    <div class="btn btn-default">
+    <%= f.submit %>
 
 <% end %>
+</div>
+</div>

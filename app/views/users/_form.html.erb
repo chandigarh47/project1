@@ -1,26 +1,44 @@
-<%= form_for @user do |f| %>
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-4 signup">
 
-<% if @user.errors.any? %>
-<ol>
-  <% @user.errors.full_messages.each do |msg| %>
-  <li><%= msg.capitalize %></li>
-  <% end %>
-</ol>
-<% end %>
+    <%= form_for @user do |f| %>
 
-<%= f.label :name %>
-<%= f.text_field :name, :autofocus => true %>
+    <% if @user.errors.any? %>
+    <ol>
+      <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg.capitalize %></li>
+      <% end %>
+    </ol>
+    <% end %>
+    <div class="form-img">
+    <div class="form-group">
+      <div class="color">
 
-<%= f.label :email %>
-<%= f.email_field :email %>
-
-<%= f.label :password %>
-<%= f.password_field :password %>
-
-<%= f.label :password_confirmation %>
-<%= f.password_field :password_confirmation %>
+        <h1>Sign Up</h1>
+      <%= f.label :name %>
+      <%= f.text_field :name, :autofocus => true, :class => 'form-control' %>
 
 
-<%= f.submit "Sign Up", data: { confirm: 'Your confirm message' } %>
+    <div class="form-group">
+    <%= f.label :email %>
+    <%= f.email_field :email, :class => 'form-control'%>
 
-<% end %>
+    <div class="form-group">
+    <%= f.label :password %>
+    <%= f.password_field :password, :class => 'form-control' %>
+
+    <div class="form-group">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, :class => 'form-control' %>
+  </div>
+
+    <div class="btn btn-default">
+    <%= f.submit "Sign Up", data: { confirm: 'Your confirm message' } %>
+
+    <% end %>
+  </div>
+    </div>
+    </div>
+  </div>
+</div>
+</div>

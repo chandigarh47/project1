@@ -1,0 +1,14 @@
+<h2><%= @review.name %></h2>
+<%= link_to 'All Reviews', reviews_path%>
+
+<ul>
+  <li>Name: <%= @review.name %></li>
+  <li>Content: <%= @review.content%></li>
+
+
+</ul>
+
+<div class="controls">
+  <%= link_to 'edit review', edit_review_path(@review.id) %>
+  <%= button_to 'delete review', review_path(@review.id), :method =>'delete' %>
+</div>

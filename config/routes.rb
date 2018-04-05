@@ -26,10 +26,13 @@
 Rails.application.routes.draw do
 
 
+  get 'reviews/create'
+
   root :to => 'pages#home'
   resources :users #, :only => [:new, :create]
   resources :hotels
   resources :bookings
+  resources :reviews, :only => [:create, :edit, :update]
 
   get '/login' => 'session#new'
   post '/login' => 'session#create'
