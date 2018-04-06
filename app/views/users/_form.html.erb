@@ -14,14 +14,17 @@
     <div class="form-group">
       <div class="color">
 
-        <h1>Sign Up</h1>
-      <%= f.label :name %>
-      <%= f.text_field :name, :autofocus => true, :class => 'form-control' %>
 
+        <h1>Sign Up</h1>
+        <div for="dropdown-menu">
+            <%= f.label :name%>
+            <%= f.text_field :name, :autofocus => true, :class => 'form-control', :id => 'DropdownName'%>
+        </div>
 
     <div class="form-group">
     <%= f.label :email %>
     <%= f.email_field :email, :class => 'form-control'%>
+
 
     <div class="form-group">
     <%= f.label :password %>
