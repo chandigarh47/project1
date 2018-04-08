@@ -1,11 +1,13 @@
 <div class="hotel-info">
-<h2><%= @hotel.name %></h2>
-<div class="all-hotels"><%= link_to 'All Hotels', hotels_path%></div>
+    <h2><%= @hotel.name %></h2>
+    <div class="all-hotels"><%= link_to 'All Hotels', hotels_path%></div>
+
 <div class="hotel-img">
-<% if @hotel.image.present? %>
-<%= image_tag @hotel.image, :alt => @hotel.name, :class => 'thumb' %>
-<% end %>
+    <% if @hotel.image.present? %>
+    <%= image_tag @hotel.image, :alt => @hotel.name, :class => 'thumb' %>
+    <% end %>
 </div>
+
 <div class="details">
   <ul>
     <li>Name: <%= @hotel.name %></li>
@@ -17,46 +19,44 @@
 </div>
 
 <div class="form-details">
-<button onclick="$('#reviews').slideToggle()">Show reviews</button>
-<div id="reviews" style="display:none">
-<% if @current_user.present? %>
-  <%= form_for Review.new do |f| %>
-    <%= f.label :content %>
-    <%= f.text_area :content %>
+      <button onclick="$('#reviews').slideToggle()">Show reviews</button>
+      <div id="reviews" style="display:none">
+        <% if @current_user.present? %>
+        <%= form_for Review.new do |f| %>
+        <%= f.label :content %>
+        <%= f.text_area :content %>
 
-    <%= hidden_field_tag :hotel_id, @hotel.id %>
-    <%= f.submit %>
-  <% end %>
-<% end %>
+        <%= hidden_field_tag :hotel_id, @hotel.id %>
+        <%= f.submit %>
+        <% end %>
+      <% end %>
 
-<div class="controls">
 
-</div>
 
-<% @hotel.reviews.order('created_at desc').each do |review| %>
-  <p>User review: <%= review.content %></p></li>
+        <% @hotel.reviews.order('created_at desc').each do |review| %>
+      <p>User review: <%= review.content %></p></li>
 
-  <% if @current_user.present? && @current_user.id == review.user_id %>
-    <%= link_to 'edit review',edit_review_path(review.id) %>
-    <%= button_to 'delete review' %>
-  <% end %>
+        <% if @current_user.present? && @current_user.id == review.user_id %>
+        <%= link_to 'edit review',edit_review_path(review.id) %>
+        <%= button_to 'delete review' %>
+      <% end %>
   <ul>
-  <li>User Name: <%= review.user.name %></li>
-  <li>User's Review Date: <%= review.created_at.strftime '%B %d, %Y'%></li>
+      <li>User Name: <%= review.user.name %></li>
+      <li>User's Review Date: <%= review.created_at.strftime '%B %d, %Y'%></li>
   </ul>
   <hr>
 
   <!-- show author name and date -->
 <% end %>
 </div>
-<div class="controls">
+  <div class="controls">
 
-  <%= link_to 'edit hotel', edit_hotel_path(@hotel.id) %>
-  <%= button_to 'delete hotel', hotel_path(@hotel.id), :method =>'delete' %>
-</div>
+    <%= link_to 'edit hotel', edit_hotel_path(@hotel.id) %>
+    <%= button_to 'delete hotel', hotel_path(@hotel.id), :method =>'delete' %>
+  </div>
 
 
-<h3>Booking</h3>
-<%= render :partial => 'bookings/form' %>
-</div>
+  <h3>Booking</h3>
+  <%= render :partial => 'bookings/form' %>
+  </div>
 </div>

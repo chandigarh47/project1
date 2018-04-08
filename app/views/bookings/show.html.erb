@@ -1,26 +1,26 @@
 <h2><%= @booking.name %></h2>
 <div class="all-bookings"><%= link_to 'All Bookings', bookings_path%></div>
 
-<div class="hotel-img">
-<% if @booking.hotel.image.present? %>
-<%= image_tag @booking.hotel.image, :alt => @booking.hotel.name, :class => 'thumb' %>
-<% end %>
-</div>
+    <div class="hotel-img">
+        <% if @booking.hotel.image.present? %>
+        <%= image_tag @booking.hotel.image, :alt => @booking.hotel.name, :class => 'thumb' %>
+        <% end %>
+    </div>
 
-<div class="booking-details">
-<ul>
-  <li>Name: <%= @booking.name %></li>
-  <li>Check In: <%= @booking.checkin.strftime '%l:%M %P'%></li>
-  <li>Check Out: <%= @booking.checkout.strftime '%l:%M %A'%></li>
-  <li>Room Type: <%= @booking.room_type %></li>
-  <li>Price: <%=  @booking.price %></li>
+  <div class="booking-details">
+      <ul>
+        <li>Name: <%= @booking.name %></li>
+        <li>Check In: <%= @booking.checkin.strftime '%l:%M %P'%></li>
+        <li>Check Out: <%= @booking.checkout.strftime '%l:%M %A'%></li>
+        <li>Room Type: <%= @booking.room_type %></li>
+        <li>Price: <%=  @booking.price %></li>
 
-</ul>
-</div>
+      </ul>
+  </div>
 
-<div class="controls">
-  <div class="change-booking">
-  <div class="edit-booking"><%= link_to 'Edit Booking', edit_booking_path(@booking.id) %></div>
-  <%= button_to 'delete booking', booking_path(@booking.id), :method =>'delete' %>
-</div>
-</div>
+    <div class="controls">
+      <div class="change-booking">
+      <div class="edit-booking"><%= link_to 'Edit Booking', edit_booking_path(@booking.id) %></div>
+      <%= button_to 'delete booking', booking_path(@booking.id), :method =>'delete' %>
+    </div>
+  </div>
