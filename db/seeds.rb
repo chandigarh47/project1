@@ -35,17 +35,17 @@ h2 = Hotel.create :name => 'Sparta Plaza', :room => 100
 
 
 #reviews and hotels
-h1.reviews << r1
-h2.reviews << r2
-h3.reviews << r3
-h4.reviews << r2
-h5.reviews << r1
-# # # r2.hotel << h1 << h6 << h7
-
-#users and reviews
-u1.reviews << r1
-u2.reviews << r3
-u2.reviews << r2
+# h1.reviews << r1
+# h2.reviews << r2
+# h3.reviews << r3
+# h4.reviews << r2
+# h5.reviews << r1
+# # # # r2.hotel << h1 << h6 << h7
+#
+# #users and reviews
+# u1.reviews << r1
+# u2.reviews << r3
+# u2.reviews << r2
 #
 # #booking and users
 # b1.users << u1
