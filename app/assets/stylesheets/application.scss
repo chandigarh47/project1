@@ -20,17 +20,7 @@ a {
 }
 
 
-@keyframes slider {
 
-    0%   {background-color: red;}
-    25%  {background-color: yellow;}
-    60%  {background-color: blue;}
-    50% {background-color: green;}
-    0%   {background-color: purple;}
-    50%  {background-color: pink;}
-    75%  {background-color: orange;}
-    100% {background-color: darkred;}
-}
  nav {
   display: flex;
   font-size: 30px;
@@ -40,8 +30,7 @@ a {
   padding-top: 35px;
   border-radius: 0.5em;
   justify-content: space-between;
-  animation-name: slider;
-  animation-duration: 8s;
+
 }
 
 h3{
