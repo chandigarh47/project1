@@ -24,25 +24,25 @@ b3 = Booking.create :name => 'david', :checkin => '2:00am', :checkout => '04:00p
 
 
 
-reviews and hotels
-h1.reviews << r1
-h2.reviews << r2
-h3.reviews << r3
-h4.reviews << r2
-h5.reviews << r1
-# # # r2.hotel << h1 << h6 << h7
-
-#users and reviews
-u1.reviews << r1
-u2.reviews << r3
-u2.reviews << r2
-
-#booking and users
-b1.users << u1
-b2.users << u2
-b3.users << u3
-
-hotels and bookings
-h1.bookings << b1
-h2.bookings << b2
-h3.bookings << b3
+# reviews and hotels
+# h1.reviews << r1
+# h2.reviews << r2
+# h3.reviews << r3
+# h4.reviews << r2
+# h5.reviews << r1
+# # # # r2.hotel << h1 << h6 << h7
+#
+# #users and reviews
+# u1.reviews << r1
+# u2.reviews << r3
+# u2.reviews << r2
+#
+# #booking and users
+# b1.users << u1
+# b2.users << u2
+# b3.users << u3
+#
+# hotels and bookings
+# h1.bookings << b1
+# h2.bookings << b2
+# h3.bookings << b3
