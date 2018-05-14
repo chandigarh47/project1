@@ -11,8 +11,8 @@ Hotel.destroy_all
 # h5 = Hotel.create(:name => 'Turtle on The Beach', :room => '250', :room_type => 'King', :price => '380', :amenity => 'Spa,Gym,Park', :image => 'https://amp.businessinsider.com/images/55f1d8ca9dd7cc11008b97fa-750-563.jpg');
 # h6 = Hotel.create(:name => 'Hotel Paradise', :room => '200', :room_type => 'Junoir Suit', :price => '400', :amenity => 'Spa,Gym', :image => 'http://static.asiawebdirect.com/m/phuket/portals/hong-kong-hotels-ws/shared/teasersL/teaser_auto_gen/top10-hotels-pools-hong-kong/teaserMultiLarge/imageHilight/teaser.jpeg.jpg');
 # h7 = Hotel.create(:name => 'JW Marriot', :room => '400', :room_type => 'Super Deluxe', :price => '360', :amenity => 'Gym,Pool', :image => 'https://image.dhgate.com/0x0/f2/albu/g5/M00/F0/03/rBVaI1mSzyqAGJWyAAIbKlC2qEs022.jpg');
-h1 = Hotel.create :name => 'Royal Inn', :room => '200'
-h2 = Hotel.create :name => 'Sparta Plaza', :room => '100'
+h1 = Hotel.create :name => 'Royal Inn', :room => 200
+h2 = Hotel.create :name => 'Sparta Plaza', :room => 100
 # h3 = Hotel.create :name => 'Hotel Alpha'
 # h4 = Hotel.create :name => 'The Quarto'
 # h5 = Hotel.create :name => 'Turtle on The Beach'
